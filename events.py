@@ -3,7 +3,7 @@ import time
 
 
 def check_events():
-    r = requests.request(method="get", url="https://api.torn.com/user/?selections=events&key=??????")
+    r = requests.request(method="get", url="https://api.torn.com/user/?selections=events&key=????????????????")
     return r.json()
 
 
@@ -11,6 +11,7 @@ if __name__ == '__main__':
     event1 = ""
     while True:
         events = check_events()
+        print(events)
 
         if event1 == events:
             time.sleep(10)
