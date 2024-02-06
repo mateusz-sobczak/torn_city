@@ -28,7 +28,7 @@ if __name__ == '__main__':
     \t\t\t\t[3] ${sake[2]['cost']:,}\t{sake[2]['quantity']}''')
 
     tequila = market.get_items(item='Bottle of Tequila')
-    profit, cost, price = market.profit_margin(price=885)
+    profit, cost, price = market.profit_margin(price=900)
 
     print(f'''
     -----Tequila-----

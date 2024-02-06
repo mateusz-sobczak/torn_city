@@ -16,7 +16,10 @@ class Market:
             exit(0)
 
         r = requests.request(method='get', url='https://api.torn.com/market/' + str(item) + '?selections=' + market +'&key=' + self.key)
-        self.items = r.json()[market]
+        if ',' in market:
+            self.items = r.json()[market.split(',')[0]], r.json()[market.split(',')[1]]
+        else:
+            self.items = r.json()[market]
         return self.items
 
     def profit_margin(self, price):
