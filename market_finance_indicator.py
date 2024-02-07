@@ -1,7 +1,8 @@
 import market
 
 if __name__ == '__main__':
-    market = market.Market(key='?')
+    key = open('../key.txt').readline()
+    market = market.Market(key=key)
 
     beers = market.get_items(item='Bottle of Beer')
     profit, cost, price = market.profit_margin(price=885)
