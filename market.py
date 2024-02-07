@@ -8,7 +8,7 @@ class Market:
         item_no = None
 
         for s in r.json()['items']:
-            if item in r.json()['items'][s]['name']:
+            if item == r.json()['items'][s]['name']:
                 item_no = s
 
         if item_no is None:
