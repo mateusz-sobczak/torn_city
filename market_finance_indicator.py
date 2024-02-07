@@ -1,10 +1,10 @@
 import market
 
 if __name__ == '__main__':
-    key = open('../key.txt').readline()
+    key = open('key.txt').readline()
     market = market.Market(key=key)
 
-    beers = market.get_items(item='Bottle of Beer')
+    beers = market.get_items(item=180) #Bottle of Beer
     profit, cost, price = market.profit_margin(price=885)
 
     print(f'''
@@ -16,7 +16,7 @@ if __name__ == '__main__':
     \t\t\t\t[2] ${beers[1]['cost']:,}\t{beers[1]['quantity']}
     \t\t\t\t[3] ${beers[2]['cost']:,}\t{beers[2]['quantity']}''')
 
-    sake = market.get_items(item='Bottle of Sake')
+    sake = market.get_items(item=294) #Bottle of Sake
     profit, cost, price = market.profit_margin(price=900)
 
     print(f'''
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     \t\t\t\t[2] ${sake[1]['cost']:,}\t{sake[1]['quantity']}
     \t\t\t\t[3] ${sake[2]['cost']:,}\t{sake[2]['quantity']}''')
 
-    tequila = market.get_items(item='Bottle of Tequila')
+    tequila = market.get_items(item=426) #Bottle of Tequila
     profit, cost, price = market.profit_margin(price=900)
 
     print(f'''

@@ -3,18 +3,20 @@ import requests
 
 
 class Market:
-    def get_items(self, item, market='bazaar'):
-        if item == 'Bottle of Beer':
-            item = 180
-        elif item == 'Bottle of Tequila':
-            item = 426
-        elif item == 'Bottle of Sake':
-            item = 294
-        elif item == 'Small First Aid Kit':
-            item = 68
-        else:
+    def get_item_id(self, item):
+        r = requests.request(method='get', url='https://api.torn.com/torn/?selections=items&key=' + self.key)
+        item_no = None
+
+        for s in r.json()['items']:
+            if item in r.json()['items'][s]['name']:
+                item_no = s
+
+        if item_no is None:
             exit(0)
 
+        return item_no
+
+    def get_items(self, item, market='bazaar'):
         r = requests.request(method='get', url='https://api.torn.com/market/' + str(item) + '?selections=' + market +'&key=' + self.key)
         if ',' in market:
             self.items = r.json()[market.split(',')[0]], r.json()[market.split(',')[1]]
