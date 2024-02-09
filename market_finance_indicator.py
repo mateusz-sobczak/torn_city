@@ -5,7 +5,7 @@ if __name__ == '__main__':
     market = market.Market(key=key)
 
     beers = market.get_items(item=180) #Bottle of Beer
-    profit, cost, price = market.profit_margin(price=885)
+    profit, cost, price = market.profit_margin(price=890)
 
     print(f'''
     ------BEER------
@@ -39,3 +39,27 @@ if __name__ == '__main__':
     Top 3 Options:\t[1] ${tequila[0]['cost']:,}\t{tequila[0]['quantity']}
     \t\t\t\t[2] ${tequila[1]['cost']:,}\t{tequila[1]['quantity']}
     \t\t\t\t[3] ${tequila[2]['cost']:,}\t{tequila[2]['quantity']}''')
+
+    lollipop = market.get_items(item=310) #Lollipop
+    profit, cost, price = market.profit_margin(price=620)
+
+    print(f'''
+    ----Lollipop----
+    Invest ${cost:,}
+    Profit ${profit:,}\t{round((profit / cost)*100, 2)}%
+    Buy at ${price:,}
+    Top 3 Options:\t[1] ${lollipop[0]['cost']:,}\t{lollipop[0]['quantity']}
+    \t\t\t\t[2] ${lollipop[1]['cost']:,}\t{lollipop[1]['quantity']}
+    \t\t\t\t[3] ${lollipop[2]['cost']:,}\t{lollipop[2]['quantity']}''')
+
+    sfirstaid = market.get_items(item=68) #Small First Aid Kit
+    profit, cost, price = market.profit_margin(price=4400)
+
+    print(f'''
+    ----Small First Aid Kit----
+    Invest ${cost:,}
+    Profit ${profit:,}\t{round((profit / cost)*100, 2)}%
+    Buy at ${price:,}
+    Top 3 Options:\t[1] ${sfirstaid[0]['cost']:,}\t{sfirstaid[0]['quantity']}
+    \t\t\t\t[2] ${sfirstaid[1]['cost']:,}\t{sfirstaid[1]['quantity']}
+    \t\t\t\t[3] ${sfirstaid[2]['cost']:,}\t{sfirstaid[2]['quantity']}''')
