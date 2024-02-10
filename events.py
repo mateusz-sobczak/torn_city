@@ -3,7 +3,8 @@ import time
 
 
 def check_events():
-    r = requests.request(method="get", url="https://api.torn.com/user/?selections=events&key=????????????????")
+    key = open('key.txt').readline()
+    r = requests.request(method="get", url=f"https://api.torn.com/user/?selections=events&key={key}")
     return r.json()
 
 

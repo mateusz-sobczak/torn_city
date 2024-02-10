@@ -14,10 +14,10 @@
 ## Life
 | Item Name           | ID | Sell Price | Benefit     | Cooldown      |
 |---------------------|----|------------|-------------|---------------|
-| small_first_aid_kit | 68 | 4400       | 20Min - 5%  | 10Min Medical |
-| first_aid_kit       | 67 | 7999       | 40Min - 10% | 15Min Medical |
+| small_first_aid_kit | 68 | 4,400      | 20Min - 5%  | 10Min Medical |
+| first_aid_kit       | 67 | 7,999      | 40Min - 10% | 15Min Medical |
 
 ## Energy
 | Item Name          | ID  | Sell Price | Benefit | Cooldown    |
 |--------------------|-----|------------|---------|-------------|
-| Can of Goose Juice | 985 | XXX        | 5       | 2Hr Booster |
+| can_of_goose_juice | 985 | 450,000    | 5       | 2Hr Booster |
