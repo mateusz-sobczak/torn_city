@@ -1,5 +1,6 @@
 import market
 import time
+import datetime
 
 key = open('../key.txt').readline()
 market = market.Market(key=key)
@@ -13,6 +14,6 @@ while True:
             file.write(f'{round(time.time())},{item_market[0]["cost"]},{bazaar[0]["cost"]}\n')
             file.close()
         except Exception as err:
-            print(err)
+            print(datetime.datetime.now(), 'Error')
             continue
     time.sleep(10)

@@ -29,12 +29,20 @@ def gen_candlestick(item, sell, time):
         xaxis=dict(
             rangeselector=dict(
                 buttons=list([
-                    dict(count=1,
-                         label="1hr",
+                    dict(count=6,
+                         label="6hr",
+                         step="hour",
+                         stepmode="backward"),
+                    dict(count=12,
+                         label="12hr",
                          step="hour",
                          stepmode="backward"),
                     dict(count=1,
                          label="1day",
+                         step="day",
+                         stepmode="backward"),
+                    dict(count=3,
+                         label="3day",
                          step="day",
                          stepmode="backward"),
                     dict(count=7,
@@ -81,12 +89,20 @@ def gen_candlestick(item, sell, time):
         xaxis=dict(
             rangeselector=dict(
                 buttons=list([
-                    dict(count=1,
-                         label="1hr",
+                    dict(count=6,
+                         label="6hr",
+                         step="hour",
+                         stepmode="backward"),
+                    dict(count=12,
+                         label="12hr",
                          step="hour",
                          stepmode="backward"),
                     dict(count=1,
                          label="1day",
+                         step="day",
+                         stepmode="backward"),
+                    dict(count=3,
+                         label="3day",
                          step="day",
                          stepmode="backward"),
                     dict(count=7,
@@ -134,12 +150,20 @@ def gen_line(item, sell):
         xaxis=dict(
             rangeselector=dict(
                 buttons=list([
-                    dict(count=1,
-                         label="1hr",
+                    dict(count=6,
+                         label="6hr",
+                         step="hour",
+                         stepmode="backward"),
+                    dict(count=12,
+                         label="12hr",
                          step="hour",
                          stepmode="backward"),
                     dict(count=1,
                          label="1day",
+                         step="day",
+                         stepmode="backward"),
+                    dict(count=3,
+                         label="3day",
                          step="day",
                          stepmode="backward"),
                     dict(count=7,
@@ -187,8 +211,8 @@ if __name__ == '__main__':
         gen_line('bottle_of_tequila', 900)
 
         # Happy
-        gen_candlestick('lollipop', 620, '15Min')
-        gen_line('lollipop', 620)
+        gen_candlestick('lollipop', 685, '15Min')
+        gen_line('lollipop', 685)
 
         # life
         gen_candlestick('small_first_aid_kit', 4400, '15Min')
@@ -198,6 +222,6 @@ if __name__ == '__main__':
         gen_line('first_aid_kit', 7999)
 
         # Energy
-        gen_candlestick('can_of_goose_juice', 450000, '15Min')
-        gen_line('can_of_goose_juice', 450000)
+        gen_candlestick('can_of_goose_juice', 385000, '15Min')
+        gen_line('can_of_goose_juice', 385000)
         time.sleep(780)

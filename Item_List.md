@@ -1,7 +1,7 @@
 ## Nerve
 | Item Name         | ID  | Sell Price | Benefit | Cooldown    |
 |-------------------|-----|------------|---------|-------------|
-| bottle_of_beer    | 180 | 890        | 1       | 1Hr Booster |
+| bottle_of_beer    | 180 | 895        | 1       | 1Hr Booster |
 | bottle_of_sake    | 294 | 900        | 1       | 1Hr Booster |
 | bottle_of_tequila | 426 | 900        | 1       | 1Hr Booster |
 
@@ -9,7 +9,7 @@
 
 | Item Name | ID  | Sell Price | Benefit | Cooldown      |
 |-----------|-----|------------|---------|---------------|
-| lollipop  | 310 | 620        | 25      | 30Min Booster |
+| lollipop  | 310 | 660        | 25      | 30Min Booster |
 
 ## Life
 | Item Name           | ID | Sell Price | Benefit     | Cooldown      |
